@@ -1,0 +1,5 @@
+{"name":"Vlad","gender":"male","age":11}
+{"name":"Viktor","gender":"male","age":32}
+{"name":"Marie","gender":"female","age":16}
+{"name":"Vladimir","gender":"male","age":54}
+{"name":"Julia","gender":"female","age":23}
