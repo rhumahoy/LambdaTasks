@@ -1,0 +1,21 @@
+{
+  "name": "07_cli_uploader",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "exports": "./index.js",
+  "engines": {
+    "node": ">=16"
+  },
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@inquirer/prompts": "^3.1.1",
+    "axios": "^1.5.0",
+    "open": "^9.1.0"
+  }
+}
