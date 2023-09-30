@@ -1,10 +1,12 @@
 const { readFileSync } = require("node:fs");
+const { findByIntIp, ip2Int } = require("./utils/ip");
 const express = require("express");
 const app = express();
 
 const DBPATH = "./IP2LOCATION-LITE-DB1.CSV";
 const DB = readFileSync(DBPATH, "utf8").trimEnd().split("\r\n");
 
+app.use(express.static("./public"));
 app.use(express.json());
 
 app.get("/api/ip", (req, res) => {
@@ -14,7 +16,13 @@ app.get("/api/ip", (req, res) => {
     req.headers["x-forwarded-for"] ||
     req.socket.remoteAddress;
 
-    sendDataByIp(ip, res);
+  sendDataByIp(ip, res);
+});
+
+app.post("/api/ip", (req, res) => {
+  const { ip } = req.body;
+
+  sendDataByIp(ip, res);
 });
 
 app.listen(5000, () => {

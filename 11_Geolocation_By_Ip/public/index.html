@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Geolocation by IP</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Geolocation by IP</h1>
+      <form>
+        <input type="text" name="ip" placeholder="IPv4" />
+        <input id="lookupBtn" type="submit" value="IP Lookup" />
+      </form>
+      <div class="details__container">
+        <h3 class="details__heading">IP Address Details</h3>
+        <div hidden="true" class="details__content">
+          <div class="details__content_row">
+            <div class="details__content_ip">
+              <div class="details__content_row--desc">
+                <img src="./img/ip.svg" alt="ip icon" />
+                <caption>
+                  IPv4:
+                </caption>
+              </div>
+              <span id="ip" tabindex="0"></span>
+            </div>
+            <div class="details__content_location">
+              <div class="details__content_row--desc">
+                <img src="./img/globe.svg" alt="globe icon" />
+                <caption>
+                  Country:
+                </caption>
+              </div>
+              <span id="location"></span>
+            </div>
+          </div>
+          <div class="details__content_row">
+            <div class="details__content_range">
+              <div class="details__content_row--desc">
+                <img src="./img/range.svg" alt="range icon" />
+                <caption>
+                  IPs range from:
+                </caption>
+              </div>
+              <span id="range_from"></span>
+            </div>
+            <div class="details__content_range">
+              <div class="details__content_row--desc">
+                <img src="./img/range.svg" alt="range icon" />
+                <caption>
+                  IPs range to:
+                </caption>
+              </div>
+              <span id="range_to"></span>
+            </div>
+          </div>
+        </div>
+        <div hidden="false" class="details--loading">
+          <img src="./img/spinner.svg" alt="loading icon" />
+        </div>
+        <div hidden="true" class="details--error">
+          <img src="./img/error.svg" alt="error icon">
+          <strong id="error">Invalid ip address</strong>
+        </div>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
