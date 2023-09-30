@@ -5,6 +5,8 @@ const app = express();
 const DBPATH = "./IP2LOCATION-LITE-DB1.CSV";
 const DB = readFileSync(DBPATH, "utf8").trimEnd().split("\r\n");
 
+app.use(express.json());
+
 app.get("/api/ip", (req, res) => {
   const ip =
     req.headers["cf-connecting-ip"] ||
