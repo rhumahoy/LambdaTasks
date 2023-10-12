@@ -1,13 +1,278 @@
-body {
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;500;800&display=swap");
+
+* {
+  font-family: Montserrat, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #1b2235;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+span {
+  color: inherit;
+}
+
+ul {
+  list-style-type: none;
+}
+
+label {
+  outline: none;
+}
+
+input::placeholder,
+.placeholder {
+  color: #a0a1a4;
+}
+
+.main {
+  max-width: 1280px;
+  padding: 80px 10px 0;
+  margin: 0 auto 120px;
+}
+
+.title {
+  width: 100%;
+  font-size: 30px;
+  line-height: 1.47;
+  margin-bottom: 8px;
+}
+
+.btn {
+  min-width: 200px;
+  width: 260px;
+  font-size: 16px;
+  text-align: center;
+  outline: none;
+  border: none;
+  border-radius: 8px;
+  padding: 18px 20px;
+  color: #fff;
+  background-color: #1b2235;
+  box-shadow: 0 11px 19px #00000029;
+  cursor: pointer;
+}
+
+.btn:disabled {
+  color: #ffffff4d;
+  background-color: #252e47;
+  box-shadow: 0 7px 14px #00000029;
+  cursor: default;
+}
+
+.btn:focus,
+.btn:hover {
+  box-shadow: 0 7px 14px #00000029;
+  background-color: #252e47;
+}
+
+.btn--cancel {
+  width: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.btn--cancel,
+.btn--cancel:focus,
+.btn--cancel:hover {
+  color: #1b2235;
+  background: none;
+  box-shadow: none;
+}
+
+.btn--cancel:focus,
+.btn--cancel:hover {
+  text-decoration: underline;
+}
+
+.price {
+  font-size: 60px;
+  font-weight: 100;
+  line-height: 1.37;
+  letter-spacing: -0.19px;
+  color: #0068e4;
+}
+
+.currency {
+  color: #0068e4;
+  margin-bottom: 13px;
+}
+
+.deadline {
+  height: 24px;
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 30px;
+}
+
+.deadline b {
+  color: #0068e4;
+}
+
+.makeOrder {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.makeOrder__item.inputs {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+.submit {
+  text-align: center;
+}
+
+.submit__content {
+  padding-top: 108px;
+}
+
+.field {
+  max-width: 345px;
+  min-width: 280px;
+  width: 100%;
+  height: 68px;
+}
+
+.field,
+.area,
+.field__select_options {
+  outline: none;
+  border: 1px solid #eee;
+  border-radius: 8px;
+}
+
+.area:focus-within,
+.field:focus-within {
+  border-color: #0068e4;
+}
+
+.field:focus-within legend {
+  color: #0068e4;
+}
+
+.field:disabled button {
+  user-select: none;
+  cursor: default;
+}
+
+.field legend {
+  height: 15px;
+  font-size: 12px;
+  font-weight: 400;
+  margin-left: 22px;
+  transform: translateY(-2px);
+  user-select: none;
+}
+
+.field > input,
+.field__select > button {
+  width: 100%;
+  padding: 20px;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  transform: translateY(-8px);
+}
+
+.field__select {
+  position: relative;
+}
+
+.field__select > button[data-open="true"] svg {
+  transform: rotate(180deg);
+}
+
+.field__select button {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.field__select_options {
+  width: 100%;
+  position: absolute;
+  display: flex;
+  flex-flow: column nowrap;
+  padding: 12px 0;
+  border-radius: 8px;
+  background-color: #fff;
+  transform: translateY(10px);
+  box-shadow: 0 15px 66px #0000000a;
+  z-index: 2;
+}
+
+.field__select_options li:hover,
+.field__select_options li:focus-within {
+  background-color: #eee;
+}
+
+.field__select_options button {
+  padding: 0 20px;
+  line-height: 2.29;
+}
+
+.area__container {
+  max-width: 600px;
+  width: 100%;
+  position: relative;
+}
+
+.area {
+  width: 100%;
+  min-height: 200px;
+  padding: 20px 30px;
+  resize: none;
+}
+
+.area__placeholder {
+  position: absolute;
+  top: 20px;
+  left: 30px;
+}
+
+.area__placeholder label {
+  color: #0068e4;
+  cursor: pointer;
+}
+
+.area__placeholder label:hover {
+  color: red;
+}
+
+.area__placeholder input {
+  display: none;
+}
+
+@media (min-width: 767px) {
+  .main {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+
+  .makeOrder {
+    grid-template-columns: 17fr 6fr;
+  }
+
+  .title {
+    margin-bottom: 40px;
+  }
+
+  .field {
+    width: 345px;
+  }
+
+  .submit {
+    text-align: right;
+  }
 }
