@@ -8,7 +8,7 @@ type TLangCosts = {
   };
 };
 
-export type TLangServices = keyof Omit<TLangNames, "min" | "oneSign">;
+export type TLangServices = keyof Omit<TLangCosts, "min" | "oneSign">;
 
 type TWorkHours = {
   start: number;
