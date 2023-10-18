@@ -33,6 +33,7 @@ export const Form: FC<IForm> = ({ onSubmit, submitText, error }) => {
         onChange={(e: ChangeEvent<HTMLInputElement>) =>
           setPassword(e.target.value)
         }
+        placeholder="Password"
         autoComplete='on'
         required
       />
