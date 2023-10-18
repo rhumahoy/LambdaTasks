@@ -78,7 +78,7 @@ export default class AuthService {
     if (statusCode === 200) {
       return body.message;
     } else {
-      return Promise.reject(body.message);
+      return Promise.reject(response.data);
     }
   }
 }
