@@ -20,7 +20,7 @@ export const SignupForm = () => {
   return (
     <div>
       <h1>Please Sign up</h1>
-      <Form submitText='Login' onSubmit={handleSubmit} error={error} />
+      <Form submitText='Sign up' onSubmit={handleSubmit} error={error} />
       <p>
         Already have an account ? <a href='#'>Login</a>
       </p>
