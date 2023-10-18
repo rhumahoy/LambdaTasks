@@ -6,7 +6,8 @@
 
 body {
   font-family: "Muli", sans-serif;
-  background-color: steelblue;
+  background: rgb(127,73,221);
+  background: linear-gradient(135deg, rgba(127,73,221,1) 0%, rgba(70,130,180,1) 100%);
   color: #fff;
   height: 100vh;
   overflow: hidden;
@@ -36,6 +37,7 @@ a {
   border-radius: 5px;
   padding: 20px 40px;
   background-color: rgba(0, 0, 0, 0.4);
+  box-shadow: 5px 5px 35px 1px rgba(127,73,221,0.5);
 }
 
 .loading {
