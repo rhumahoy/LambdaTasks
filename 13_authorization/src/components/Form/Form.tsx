@@ -17,7 +17,7 @@ export const Form: FC<IForm> = ({ onSubmit, submitText, error }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className={error ? "invalid" : ""}>
       <Input
         type='text'
         value={email}
@@ -33,7 +33,7 @@ export const Form: FC<IForm> = ({ onSubmit, submitText, error }) => {
         onChange={(e: ChangeEvent<HTMLInputElement>) =>
           setPassword(e.target.value)
         }
-        placeholder="Password"
+        placeholder='Password'
         autoComplete='on'
         required
       />

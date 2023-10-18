@@ -112,6 +112,14 @@ a {
   transform: translateY(-30px);
 }
 
+.invalid input {
+  border-bottom-color: red !important;
+}
+
+.invalid input + label span {
+  color: red !important;
+}
+
 .error {
   font-size: 18px;
   color: red;
